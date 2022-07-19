@@ -17,7 +17,7 @@ const Rooms = () => {
     <main>
         <h1>Rooms</h1>
         <ol>
-          {rooms.map(item => <li>{item.name}</li>)}
+          {rooms.map(item => <li><a href={`rooms/${item.id}`}>{item.name}</a></li>)}
         </ol>
     </main>
   )
