@@ -1,12 +1,26 @@
-import React from 'react'
+import {useState, useEffect, React} from 'react'
 
-const Rooms = (props) => {
-    console.log(props.rooms)
+const Rooms = () => {
+  let [rooms, setRooms] = useState([])
 
-    return (
-        <section>
-        </section>
-    )
+    useEffect(() => {
+        getRooms()
+    }, [])
+
+    let getRooms = async () => {
+        let response = await fetch('/api/rooms/')
+        let data = await response.json()
+        setRooms(data)
+    }
+
+  return (
+    <main>
+        <h1>Rooms</h1>
+        <ol>
+          {rooms.map(item => <li>{item.name}</li>)}
+        </ol>
+    </main>
+  )
 }
 
 export default Rooms
