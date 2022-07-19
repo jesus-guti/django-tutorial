@@ -3,15 +3,19 @@ import Home from "./pages/Home"
 import Rooms from "./pages/Rooms"
 import Navbar from "./components/Navbar"
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
+  Routes,
   Route,
-} from "react-router-dom"
+} from "react-router-dom";
 
 function App() { 
     return ( 
-      <div>
-        <h1>Hello</h1>
-      </div>
+      <BrowserRouter>
+        <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="rooms" element={<Rooms />} />
+        </Routes>
+      </BrowserRouter>
     )
 }
 

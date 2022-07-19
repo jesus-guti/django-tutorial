@@ -1,4 +1,4 @@
-import React from 'react'
+import {useState, useEffect, React} from 'react'
 
 const Rooms = () => {
   let [rooms, setRooms] = useState([])
@@ -15,7 +15,8 @@ const Rooms = () => {
 
   return (
     <main>
-        {rooms.map(item => <div>item</div>)}
+        <h1>this is rooms</h1>
+        {rooms.map(item => <li>{item.name}</li>)}
     </main>
   )
 }
