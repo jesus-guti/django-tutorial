@@ -20,4 +20,4 @@ const Rooms = () => {
   )
 }
 
-export default Home
+export default Rooms

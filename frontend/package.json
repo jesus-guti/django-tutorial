@@ -1,35 +1,22 @@
 {
-    "name": "django_tutorial",
-    "version": "1.0.0",
-    "description": "1.",
-    "main": "index.js",
+    "name": "frontend",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
     "scripts": {
-        "dev": "webpack --mode development --watch",
-        "built": "webpack --mode production"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/jesus-guti/django-tutorial.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/jesus-guti/django-tutorial/issues"
-    },
-    "homepage": "https://github.com/jesus-guti/django-tutorial#readme",
-    "devDependencies": {
-        "@babel/core": "^7.18.6",
-        "@babel/preset-env": "^7.18.6",
-        "@babel/preset-react": "^7.18.6",
-        "babel-loader": "^8.2.5",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "webpack": "^5.73.0",
-        "webpack-cli": "^4.10.0"
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
     },
     "dependencies": {
-        "@babel/plugin-proposal-class-properties": "^7.18.6",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
         "react-router-dom": "^6.3.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.0.15",
+        "@types/react-dom": "^18.0.6",
+        "@vitejs/plugin-react": "^2.0.0",
+        "vite": "^3.0.2"
     }
 }
