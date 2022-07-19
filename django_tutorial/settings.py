@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 import mimetypes
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -55,7 +56,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            BASE_DIR / 'frontend/dist/'
+            os.path.join(BASE_DIR, "frontend/dist")
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -117,12 +118,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-mimetypes.add_type ("text / html", ".js", True) 
+mimetypes.add_type ("application/javascript", ".js", True)
 
-STATIC_URL = '/dist/'
+STATIC_URL = '/assets/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'frontend/dist'
+    os.path.join(BASE_DIR, "frontend/dist/assets")
 ]
 
 # Default primary key field type
